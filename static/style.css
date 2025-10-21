@@ -1,0 +1,151 @@
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #A8E6CF, #DCEDC1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chat container */
+.chat-container {
+    width: 450px;
+    max-width: 90%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Chat box */
+.chat-box {
+    height: 400px; /* tinggi tetap */
+    overflow-y: auto; /* scroll otomatis ketika pesan panjang */
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* Scrollbar custom */
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(76, 175, 80, 0.7);
+    border-radius: 4px;
+}
+.chat-box::-webkit-scrollbar-track {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+}
+
+/* Messages */
+.chat-message {
+    margin: 6px 0;
+    padding: 10px 14px;
+    border-radius: 18px;
+    font-size: 15px;
+    line-height: 1.4;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* User message */
+.chat-message.user {
+    background-color: #e6f3ff;   /* biru muda */
+    color: #000;
+    align-self: flex-end;
+    text-align: left;
+    border-bottom-right-radius: 6px; /* pojok bawah lebih tumpul */
+}
+
+/* Bot message */
+.chat-message.bot {
+      margin: 0.3em 0 0.3em 1.2em; /* kasih jarak kiri */
+  padding-left: 1em;           /* geser bullet */
+    background-color: #fff3e0;   /* oranye muda */
+    color: #000;
+    align-self: flex-start;
+    text-align: left;
+    border-bottom-left-radius: 6px; /* pojok bawah lebih tumpul */
+}
+
+.chat-message.bot ul {
+  margin: 0.3em 0 0.3em 1.2em; /* kasih jarak kiri */
+  padding-left: 1em;           /* geser bullet */
+}
+
+.chat-message.bot li {
+  margin-bottom: 0.4em;        /* kasih jarak antar list */
+  line-height: 1.4em;          /* biar lebih enak dibaca */
+}
+
+
+/* Input area */
+.chat-input {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background-color: #f0f0f0;
+}
+
+/* Input & textarea */
+.chat-input input,
+.chat-input textarea {
+    flex: 1;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Textarea lebih tinggi */
+.chat-input textarea {
+    height: 60px;
+    resize: none;
+}
+
+/* Button kirim */
+.chat-input button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-input button:hover {
+    background-color: #43a047;
+    transform: scale(1.05);
+}
