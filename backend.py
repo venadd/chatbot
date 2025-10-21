@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template
 from openai import OpenAI
 from flask_cors import CORS
 import re
+import os 
 
 app = Flask(__name__)
 
